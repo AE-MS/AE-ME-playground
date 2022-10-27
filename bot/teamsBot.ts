@@ -193,7 +193,7 @@ async function createCardCommand(context: TurnContext, action: any): Promise<any
             width: 450,
             height: 125,
             title: 'Task module Static HTML',
-            url: `https://localhost:3978/StaticPage.html`
+            url: `https://e47c742e816d.ngrok.io/static/index.html`
         }
     }
   };
