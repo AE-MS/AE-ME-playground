@@ -179,12 +179,23 @@ async function createCardCommand(context: TurnContext, action: any): Promise<any
     preview: heroCard,
   };
 
+  // return {
+  //   composeExtension: {
+  //     type: "result",
+  //     attachmentLayout: "list",
+  //     attachments: [attachment],
+  //   },
+  // };
   return {
-    composeExtension: {
-      type: "result",
-      attachmentLayout: "list",
-      attachments: [attachment],
-    },
+    task: {
+        type: 'continue',
+        value: {
+            width: 450,
+            height: 125,
+            title: 'Task module Static HTML',
+            url: `https://localhost:3978/StaticPage.html`
+        }
+    }
   };
 }
 
