@@ -6,10 +6,15 @@
 
 <script>
     microsoftTeams.app.initialize().then(() => {
-        alert("Initialize finished");
+        microsoftTeams.getContext((context) => {
+            alert(`Theme: ${context.theme}`);
+            alert(`Parent message id: ${context.parentMessageId}`);
+        })
+        // microsoftTeams.app.getContext().then(async (context) => {
+        //     alert(`Context: ${context.app.host.name}`);
+        //     alert(`Parent message: ${context.app.parentMessageId}`);
+        // });
     });
-    // const context = microsoftTeams.getContext();
-    // alert(`Context: ${context.app.host.name}`);
 </script>
 
 <html>
