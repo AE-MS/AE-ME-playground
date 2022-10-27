@@ -1,3 +1,17 @@
+<!-- Microsoft Teams JavaScript API (via CDN) -->
+<script
+  src="https://res.cdn.office.net/teams-js/2.4.2/js/MicrosoftTeams.js"
+  crossorigin="anonymous"
+></script>
+
+<script>
+    microsoftTeams.app.initialize().then(() => {
+        alert("Initialize finished");
+    });
+    // const context = microsoftTeams.getContext();
+    // alert(`Context: ${context.app.host.name}`);
+</script>
+
 <html>
     Hello world!
 </html>
